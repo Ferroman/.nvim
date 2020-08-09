@@ -1,5 +1,18 @@
 filetype plugin on                                                              "Automaticaly enuble plugin by file type
 
+"Themes settings
+syntax enable
+
+set termguicolors
+set background=dark
+
+let g:gruvbox_transp_bg = 1
+let g:seoul256_background = 233
+let g:palenight_terminal_italics=1
+colorscheme palenight
+hi Normal ctermbg=none guibg=none
+
+"General settings
 let g:loaded_netrwPlugin = 1                                                    "Do not load netrw
 let g:loaded_matchit = 1                                                        "Do not load matchit, use matchup plugin<Paste>
 
@@ -30,7 +43,7 @@ set exrc                                                                        
 set secure                                                                      "Forbid autocmd in local vimrc
 set grepprg=rg\ --smart-case\ --vimgrep                                         "Use ripgrep for grepping
 set tagcase=smart                                                               "Use smarcase for tags
-set updatetime=300                                                              "Cursor hold timeout
+set updatetime=100                                                              "Cursor hold timeout
 set shortmess+=c                                                                "Disable completion menu messages in command line
 set undofile                                                                    "Keep undo history across sessions, by storing in file
 set noswapfile                                                                  "Disable creating swap file
@@ -50,15 +63,26 @@ set wildignore=*.o,*~
 set scrolloff=8                                                                 "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=5
-"set pyxversion=3                                                                "Always use python 3
+"set pyxversion=3                                                               "Always use python 3
 set updatetime=100                                                              "Update for vim-signify
 
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+let g:blamer_enabled = 1                                                        "show blame in line
+let g:blamer_delay = 100
+let mapleader=","                                                               "Set user leader to ,
+map <A-t> :FloatermNew<CR>
 
+"NERDTree settings
 map <F10> :NERDTreeToggle<CR>
 let NERDTreeWinSize = 25 
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.swp$', '\~$']
 
-map <A-t> :FloatermNew<CR>
+"Easy buffers navigation
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
+"Persistent undo
+set undodir=/tmp/
+set undofile
 
