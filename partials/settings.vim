@@ -65,6 +65,7 @@ set sidescrolloff=15
 set sidescroll=5
 "set pyxversion=3                                                               "Always use python 3
 set updatetime=100                                                              "Update for vim-signify
+"set sessionoptions-=blank                                                       "Make compatible to sessions
 
 let g:blamer_enabled = 1                                                        "show blame in line
 let g:blamer_delay = 100
@@ -86,3 +87,17 @@ nmap <silent> <C-l> :wincmd l<CR>
 set undodir=/tmp/
 set undofile
 
+"Copy to clipboard
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+yg_
+nnoremap <leader>y "+y
+
+"Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+"Remap recording
+nnoremap <leader>q q
+nnoremap q <Nop>
