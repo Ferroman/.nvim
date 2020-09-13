@@ -103,9 +103,23 @@ nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
-"Remap recording
+"Remap recording to stop hitting it accidentally
 nnoremap <leader>q q
 nnoremap q <Nop>
+
+"Show line diff by hotkey
+map <leader>d :SignifyHunkDiff<CR>
+
+"Git fugutive toggle on F9
+function! ToggleGStatus()
+    if buflisted(bufname('.git/index'))
+        bd .git/index
+    else
+        Gstatus
+    endif
+endfunction
+command ToggleGStatus :call ToggleGStatus()
+map <F9> :ToggleGStatus<CR> 
 
 "Merginal hotkey
 map <F12> :MerginalToggle<CR>
