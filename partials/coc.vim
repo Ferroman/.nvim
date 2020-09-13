@@ -4,8 +4,7 @@ let g:coc_global_extensions = [
       \ 'coc-yaml',
       \ 'coc-python',
       \ 'coc-rls',
-      \ 'coc-tsserver',
-      \ 'coc-git'
+      \ 'coc-tsserver'
       \ ]
 
 " complenition hotkey
