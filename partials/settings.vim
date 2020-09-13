@@ -12,6 +12,10 @@ let g:palenight_terminal_italics=1
 colorscheme palenight
 hi Normal ctermbg=none guibg=none
 
+let g:vim_markdown_conceal = 0                                                  "Disable conceal feature for markdown (polyglot plugin)
+let g:vim_markdown_conceal_code_blocks = 0                                      "For code blocks too
+let g:vim_json_syntax_conceal = 0                                               "For json too
+
 "General settings
 let g:loaded_netrwPlugin = 1                                                    "Do not load netrw
 let g:loaded_matchit = 1                                                        "Do not load matchit, use matchup plugin<Paste>
@@ -55,7 +59,7 @@ set smartindent                                                                 
 set expandtab                                                                   "Use spaces for indentation
 set shiftwidth=2                                                                "Use 2 spaces for indentation
 set nofoldenable                                                                "Disable folding by default
-set colorcolumn=80                                                              "Highlight 80th column for easier wrapping
+set colorcolumn=100                                                             "Highlight 80th column for easier wrapping
 set foldmethod=syntax                                                           "When folding enabled, use syntax method
 set diffopt+=vertical                                                           "Always use vertical layout for diffs
 set wildmenu                                                                    "Use the cool tab complete menu
@@ -76,6 +80,7 @@ map <A-t> :FloatermNew<CR>
 map <F10> :NERDTreeToggle<CR>
 let NERDTreeWinSize = 25 
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.swp$', '\~$']
+let g:NERDTreeGitStatusUseNerdFonts = 1
 
 "Easy buffers navigation
 nmap <silent> <C-h> :wincmd h<CR>
@@ -101,3 +106,23 @@ vnoremap <leader>P "+P
 "Remap recording
 nnoremap <leader>q q
 nnoremap q <Nop>
+
+"Merginal hotkey
+map <F12> :MerginalToggle<CR>
+
+"Fix integration between NERDTree and FZF
+autocmd FileType nerdtree let t:nerdtree_winnr = bufwinnr('%')
+autocmd BufWinEnter * call PreventBuffersInNERDTree()
+
+function! PreventBuffersInNERDTree()
+  if bufname('#') =~ 'NERD_tree' && bufname('%') !~ 'NERD_tree'
+    \ && exists('t:nerdtree_winnr') && bufwinnr('%') == t:nerdtree_winnr
+    \ && &buftype == '' && !exists('g:launching_fzf')
+    let bufnum = bufnr('%')
+    close
+    exe 'b ' . bufnum
+    NERDTree
+  endif
+  if exists('g:launching_fzf') | unlet g:launching_fzf | endif
+endfunction
+
