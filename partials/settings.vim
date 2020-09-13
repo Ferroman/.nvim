@@ -71,6 +71,8 @@ set sidescroll=5
 set updatetime=100                                                              "Update for vim-signify
 "set sessionoptions-=blank                                                       "Make compatible to sessions
 
+let g:auto_save = 1                                                             "enable AutoSave on Vim startup
+let g:auto_save_silent = 1                                                      "do not display the auto-save notification
 let g:blamer_enabled = 1                                                        "show blame in line
 let g:blamer_delay = 100
 let mapleader=","                                                               "Set user leader to ,
@@ -123,6 +125,18 @@ map <F9> :ToggleGStatus<CR>
 
 "Merginal hotkey
 map <F12> :MerginalToggle<CR>
+
+"Fzf hotkey
+"find files
+nnoremap <silent> <C-f> :Files<CR>
+"find history
+nnoremap <silent> <Leader>hh :History<CR>
+nnoremap <silent> <Leader>h: :History:<CR>
+nnoremap <silent> <Leader>h/ :History/<CR>
+
+"find everything ut files
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+nnoremap <silent> <Leader>f :Rg<CR>
 
 "Fix integration between NERDTree and FZF
 autocmd FileType nerdtree let t:nerdtree_winnr = bufwinnr('%')

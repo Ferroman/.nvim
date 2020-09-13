@@ -28,7 +28,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }                             
 Plug 'junegunn/fzf.vim'                                                         "need both
 Plug 'tpope/vim-fugitive'                                                       "Premier Vim plugin for Git
 Plug 'idanarye/vim-merginal'                                                    "Branches management
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'                                              "Show changed files in tree
+Plug '907th/vim-auto-save'                                                      "Automatically save files on change
+Plug 'chrisbra/vim-diff-enhanced'                                               "Better diff
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

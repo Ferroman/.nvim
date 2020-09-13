@@ -1,6 +1,7 @@
 ## Features
 
 * Automatic sessions management
+* Autosave
 * Convinient git operations
 * Icons for changed files
 * Icons for changed lines
@@ -9,8 +10,7 @@
 * Diff preview for changes
 * Intellisense for rust/python/js, code navigation
 * Terminal in floating window for quick commands
-* Fast sorce search with preview
-* Fast file search with fuzzy search
+* Fast source and file search with preview with fuzzy search
 * Quick comment/uncomment
 
 ## Install
@@ -37,7 +37,7 @@ Install [NERD font](https://github.com/ryanoasis/nerd-fonts#option-3-install-scr
   * `aa` - add new branch
 * `<F9>` - commit view
   * `cc` - commit
-  * `-` - Stash/unstash file
+  * `-` or `a` - Stash/unstash file
   * `dd` - show diff
   * `dq` - exit diff
 * `Alt-t` - terminal in floating window
@@ -50,12 +50,11 @@ Install [NERD font](https://github.com/ryanoasis/nerd-fonts#option-3-install-scr
 * `,rn` - rename symbol
 * `C-o` - jump to the previous location
 * `Tab` - autocomplete navigation
-
-## Commands
-
-* `:Rg` - fast grep with fuzzy search
-    * `<C-j>` `<C-k>` for navigation
+* `,f` or `<C-f>` for files - fast grep with fuzzy search
+    * `<C-j>` `<C-k>` or `<Up>` `<Down>` for navigation.
+    * `C-Up` `C-Down` for preview navigation
     * `<Tab>` to select/unselect
     * `<Enter>` - open in current buffer (selected witll be in quickfix view)
       `C-t` - in tab, `C-i` - horisontal split, `C-v` - vertical
+* `,hh`, `,h:`, `,h\` - find in history
 
