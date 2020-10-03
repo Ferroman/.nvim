@@ -33,11 +33,13 @@ Install [NERD font](https://github.com/ryanoasis/nerd-fonts#option-3-install-scr
 * `,d` - show diff for change
 * `<F10>` - NERDTree
 * `<F12>` - Git branches manipulations
-  * `cc` - switch to branch
-  * `aa` - add new branch
-* `<F9>` - commit view
-  * `cc` - commit
+  * `cc`  - switch to branch
+  * `aa`  - add new branch
+* `<F9>`  - commit view
+  * `g?`  - show help
+  * `cc`  - commit
   * `-` or `a` - Stash/unstash file
+  * `X`  - revert file
   * `dd` - show diff
   * `dq` - exit diff
 * `Alt-t` - terminal in floating window

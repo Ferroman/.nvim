@@ -76,6 +76,13 @@ let g:auto_save_silent = 1                                                      
 let g:blamer_enabled = 1                                                        "show blame in line
 let g:blamer_delay = 100
 let mapleader=","                                                               "Set user leader to ,
+"
+":Q behaves as :q
+command! Q :q
+command! W :w
+command! Wq :wq
+
+"Run terminal in floating window
 map <A-t> :FloatermNew<CR>
 
 "NERDTree settings
@@ -111,13 +118,15 @@ nnoremap q <Nop>
 
 "Show line diff by hotkey
 map <leader>d :SignifyHunkDiff<CR>
+"Rollback hunk by hotkey
+map <leader>du :SignifyHunkUndo<CR>
 
-"Git fugutive toggle on F9
+"Git fugitive toggle on F9
 function! ToggleGStatus()
     if buflisted(bufname('.git/index'))
         bd .git/index
     else
-        Gstatus
+        Git
     endif
 endfunction
 command ToggleGStatus :call ToggleGStatus()
@@ -134,7 +143,7 @@ nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR>
 
-"find everything ut files
+"find everything but files
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 nnoremap <silent> <Leader>f :Rg<CR>
 
