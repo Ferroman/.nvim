@@ -30,7 +30,6 @@ Plug 'chrisbra/vim-diff-enhanced'                                               
 Plug 'scrooloose/nerdtree'                                                      "File navigation
 Plug 'Xuyuanp/nerdtree-git-plugin'                                              "Show changed files in tree
 Plug 'ryanoasis/vim-devicons'                                                   "Icons for files
-Plug 'voldikss/vim-floaterm'                                                    "Terminal in the floating window
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

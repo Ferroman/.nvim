@@ -82,11 +82,8 @@ command! Q :q
 command! W :w
 command! Wq :wq
 
-"Run terminal in floating window
-map <A-t> :FloatermNew<CR>
-
 "NERDTree settings
-map <F10> :NERDTreeToggle<CR>
+map <leader>o :NERDTreeToggle<CR>
 let NERDTreeWinSize = 25 
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.swp$', '\~$']
 let g:NERDTreeGitStatusUseNerdFonts = 1
@@ -130,10 +127,10 @@ function! ToggleGStatus()
     endif
 endfunction
 command ToggleGStatus :call ToggleGStatus()
-map <F9> :ToggleGStatus<CR> 
+map <leader>g :ToggleGStatus<CR> 
 
 "Merginal hotkey
-map <F12> :MerginalToggle<CR>
+map <leader>G :MerginalToggle<CR>
 
 "Fzf hotkey
 "find files

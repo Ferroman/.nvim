@@ -1,3 +1,15 @@
 { "python.jediEnabled": false,
 "git.addGBlameToVirtualText": true,
-"signature.target": "echo"}
+"signature.target": "echo",
+"languageserver": {
+  "terraform": {
+    "command": "terraform-lsp",
+    "filetypes": [
+      "terraform",
+      "tf"
+    ],
+    "initializationOptions": {},
+    "settings": {}
+  }
+}
+}
