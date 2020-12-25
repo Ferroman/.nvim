@@ -31,18 +31,17 @@ Install [NERD font](https://github.com/ryanoasis/nerd-fonts#option-3-install-scr
 * Leader set to `,`
 * Recording remaped to `,q`
 * `,d` - show diff for change
-* `<F10>` - NERDTree
+* `,o` - NERDTree
 * `<F12>` - Git branches manipulations
   * `cc`  - switch to branch
   * `aa`  - add new branch
-* `<F9>`  - commit view
+* `,g`  - commit view
   * `g?`  - show help
   * `cc`  - commit
   * `-` or `a` - Stash/unstash file
   * `X`  - revert file
   * `dd` - show diff
   * `dq` - exit diff
-* `Alt-t` - terminal in floating window
 * `,y` - copy to clipboard
 * `,p` - paste from clipboard
 * `,c<space>` - toggle comment for line/selection
