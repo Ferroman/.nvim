@@ -14,6 +14,7 @@ Plug 'junegunn/seoul256.vim'                                                    
 Plug 'lifepillar/vim-gruvbox8'                                                  "Colorscheme
 Plug 'itchyny/lightline.vim'                                                    "Statusline
 Plug 'sheerun/vim-polyglot'                                                     "Highlighting for different file types
+Plug 'ajorgensen/vim-markdown-toc'                                              "Generate TOC for markdown files
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }                   "Async tooltips tool
 Plug 'tpope/vim-obsession'                                                      "Session automatic management
 Plug 'dhruvasagar/vim-prosession'                                               "Save session per directory

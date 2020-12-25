@@ -76,11 +76,14 @@ let g:auto_save_silent = 1                                                      
 let g:blamer_enabled = 1                                                        "show blame in line
 let g:blamer_delay = 100
 let mapleader=","                                                               "Set user leader to ,
-"
+
 ":Q behaves as :q
 command! Q :q
 command! W :w
 command! Wq :wq
+
+"Hide highlght on ESC
+nnoremap <esc> :noh<return><esc>
 
 "NERDTree settings
 map <leader>o :NERDTreeToggle<CR>

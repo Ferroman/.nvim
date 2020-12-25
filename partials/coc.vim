@@ -3,7 +3,7 @@ let g:coc_disable_startup_warning = 1
 let g:coc_global_extensions = [
       \ 'coc-snippets',
       \ 'coc-yaml',
-      \ 'coc-python',
+      \ 'coc-pyright',
       \ 'coc-rls',
       \ 'coc-tsserver',
       \ 'coc-go'
