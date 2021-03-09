@@ -2,6 +2,9 @@
   "python.jediEnabled": false,
   "git.addGBlameToVirtualText": true,
   "signature.target": "echo",
+  "javascript": {
+    "suggestionActions": {"enabled": false}
+  },
   "languageserver": {
     "terraform": {
       "command": "terraform-lsp",

@@ -117,7 +117,7 @@ nnoremap <leader>q q
 nnoremap q <Nop>
 
 "Show line diff by hotkey
-map <leader>d :SignifyHunkDiff<CR>
+map <leader>ds :SignifyHunkDiff<CR>
 "Rollback hunk by hotkey
 map <leader>du :SignifyHunkUndo<CR>
 

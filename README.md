@@ -14,6 +14,14 @@
 * Quick comment/uncomment
 
 ## Install
+
+### Prerequisites
+
+Enable bitmap fonts for Ubuntu-like distros: http://www.alanbriolat.co.uk/enable-bitmap-fonts-on-ubuntu-jaunty.html
+Install [NERD font](https://github.com/ryanoasis/nerd-fonts#option-3-install-script) to support icons in NERDTree. Recommended:  [Iosevka NERD font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka)
+
+### Initialize plugins
+
 Install plug.vim ([Instructions](https://github.com/junegunn/vim-plug)
 
 ```bash
@@ -22,9 +30,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim
 :PlugInstall
 ```
-
-Enable bitmap fonts for Ubuntu-like distros: http://www.alanbriolat.co.uk/enable-bitmap-fonts-on-ubuntu-jaunty.html
-Install [NERD font](https://github.com/ryanoasis/nerd-fonts#option-3-install-script) to support icons in NERDTree. Recommended:  [Iosevka NERD font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka)
 
 ## Keys cheatsheet
 
