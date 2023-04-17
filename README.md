@@ -1,3 +1,7 @@
+[DEPRICATED]
+
+See https://github.com/Ferroman/.dotfiles
+
 ## Features
 
 * Automatic sessions management
